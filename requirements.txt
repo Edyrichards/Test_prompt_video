@@ -9,3 +9,8 @@ opencv-python
 ffmpeg-python
 audiocraft
 tts==0.17.1
+lk9hwv-codex/build-an-automated-video-creation-system
+huggingface-hub
+gradio
+
+main
