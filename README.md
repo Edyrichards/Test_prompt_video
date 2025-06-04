@@ -36,6 +36,17 @@ source venv/bin/activate
 
 ---
 
+## External Dependencies
+
+- **SadTalker**: This project uses `SadTalker` for animating images with audio. `SadTalker` is an external dependency and must be installed and configured separately.
+- Please refer to the [official SadTalker repository](https://github.com/OpenTalker/SadTalker) for installation instructions.
+- Ensure that `SadTalker` is correctly set up for your environment (especially if using Apple Silicon M1/M2/M3 chips), including its own Python environment and dependencies. The animation script currently expects `SadTalker` to be located in `~/SadTalker`.
+- **ffmpeg**: The video editing component (`moviepy`) relies on `ffmpeg`. The `ffmpeg-python` package listed in `requirements.txt` should provide the necessary bindings. However, if you encounter issues related to `ffmpeg` (e.g., "ffmpeg: command not found"), you might need to install it system-wide.
+    - On macOS, you can install it using Homebrew: `brew install ffmpeg`.
+    - For other operating systems, please refer to the official `ffmpeg` download page.
+
+---
+
 ## 🚀 Usage
 
 Example command to generate an inspirational Pixar-style clip:
