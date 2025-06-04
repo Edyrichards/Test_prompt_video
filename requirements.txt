@@ -1,0 +1,11 @@
+transformers
+torch
+torchaudio
+Pillow
+diffusers
+accelerate
+moviepy
+opencv-python
+ffmpeg-python
+audiocraft
+tts==0.17.1
