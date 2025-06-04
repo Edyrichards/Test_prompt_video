@@ -4,12 +4,14 @@ from pathlib import Path
 from typing import Optional
 
 from diffusers import StableDiffusionPipeline
+from huggingface_hub import hf_hub_download
 import torch
 from PIL import Image
 
 STYLE_MODELS = {
     "pixar": "nerijs/pixart-alpha",
-    "anime": "Linaqruf/anything-v3.0",
+    # use a freely available model instead of the gated anything-v3.0
+    "anime": "runwayml/stable-diffusion-v1-5",
     "realistic": "runwayml/stable-diffusion-v1-5",
 }
 
@@ -31,6 +33,8 @@ def generate_image(prompt: str, emotion: str, style: str, lora: Optional[str] = 
     pipe = load_pipeline(style)
     if lora:
         logging.info("Loading LoRA weights %s", lora)
+        if not Path(lora).exists():
+            lora = hf_hub_download(lora)
         pipe.load_lora_weights(lora)
         pipe.fuse_lora()
     formatted = f"{prompt}, dreamy, {emotion}, ultra-detailed"
