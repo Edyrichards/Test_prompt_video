@@ -2,9 +2,12 @@ transformers==4.37.2
 diffusers==0.27.2
 huggingface-hub==0.20.3
 accelerate==0.25.0
+
+# Use torch 2.3.0 as it's the latest stable and matches torchvision/torchaudio
 torch==2.3.0
 torchvision==0.18.0
 torchaudio==2.3.0
+
 pillow==10.2.0
 numpy>=1.25,<2.0
 moviepy==1.0.3
