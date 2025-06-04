@@ -27,12 +27,12 @@ This repository contains a modular pipeline to generate a **1-minute video** fro
 
 ## 🔧 Setup
 
+This sets up a virtual environment, installs dependencies (with MPS support for Mac GPU), and prepares models for local inference:
+
 ```bash
 bash setup_macos.sh
 source venv/bin/activate
 ```
-
-This sets up a virtual environment, installs dependencies (with MPS support for Mac GPU), and prepares models for local inference.
 
 ---
 
