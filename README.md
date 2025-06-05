@@ -22,6 +22,7 @@ This repository contains a modular pipeline to generate a **1-minute video** fro
 - Python 3.10 or **3.11** (Python 3.12 is currently unsupported by the `tts` package)
 - At least 16 GB RAM recommended
 - ~15 GB free disk space for cached models
+- `typer` is pinned to `<1.0` to satisfy both `gradio` and `spacy`
 
 If you manage multiple Python versions, `pyenv` can help select 3.11:
 
