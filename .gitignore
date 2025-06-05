@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+venv/
+Open-Sora/
+SadTalker/
+*.log
+samples/
