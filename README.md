@@ -19,7 +19,8 @@ This repository contains a modular pipeline to generate a **1-minute video** fro
 ## 🖥 Requirements
 
 - macOS 12+ with Apple Silicon (M1/M2)
-- Python 3.10 or **3.11** (Python 3.12 is currently unsupported by the `tts` package)
+- Python 3.10 or **3.11**
+  (Python 3.12 lacks wheels for some dependencies like `spacy` and `tts`)
 - At least 16 GB RAM recommended
 - ~15 GB free disk space for cached models
 
