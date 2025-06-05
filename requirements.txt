@@ -16,3 +16,5 @@ ffmpeg-python==0.2.0
 audiocraft==0.0.2
 tts==0.17.1 ; python_version < "3.12"
 gradio==4.16.0
+spacy==3.8.7
+typer>=0.9,<1.0
