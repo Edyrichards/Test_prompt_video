@@ -9,10 +9,10 @@ torchvision==0.18.0
 torchaudio==2.3.0
 
 pillow==10.2.0
-numpy>=1.25,<2.0
+numpy==1.24.3
 moviepy==1.0.3
 opencv-python==4.9.0.80
 ffmpeg-python==0.2.0
 audiocraft==0.0.2
-tts==0.17.1
+tts==0.17.1 ; python_version < "3.12"
 gradio==4.16.0

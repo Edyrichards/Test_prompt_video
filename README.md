@@ -19,9 +19,17 @@ This repository contains a modular pipeline to generate a **1-minute video** fro
 ## 🖥 Requirements
 
 - macOS 12+ with Apple Silicon (M1/M2)
-- Python 3.10 or newer
-- At least 16 GB RAM recommended
-- ~15 GB free disk space for cached models
+- Python 3.10 or **3.11** (Python 3.12 is currently unsupported by the `tts` package)
+- At least 16 GB RAM recommended
+- ~15 GB free disk space for cached models
+
+If you manage multiple Python versions, `pyenv` can help select 3.11:
+
+```bash
+brew install pyenv
+pyenv install 3.11.8
+pyenv local 3.11.8
+```
 
 ---
 
@@ -76,6 +84,54 @@ python main.py \
 4. **Voice Synthesizer** – Coqui TTS or Bark with emotional tone
 5. **Music Composer** – Audiocraft MusicGen or user-provided track
 6. **Video Editor** – `moviepy` for fade effects, zoom, and audio sync
+
+---
+
+## \ud83c\udf0a Open-Sora Integration
+
+You can optionally use [Open-Sora](https://github.com/hpcaitech/Open-Sora) for
+direct text-to-video generation. First install the model and its dependencies:
+
+```bash
+bash setup_opensora.sh
+```
+
+Then generate a clip with the wrapper script:
+
+```bash
+python opensora_pipeline.py \
+  --prompt "raining, sea" \
+  --opensora-dir ~/Open-Sora \
+  --resolution 256px \
+  --save-dir samples
+```
+
+Generation on CPU or Apple \`mps\` works but is slow; a discrete GPU is
+recommended.
+
+---
+
+## 🕺 SadTalker Setup
+
+SadTalker provides optional talking-head animation. The pipeline expects the
+tool to be installed under `~/SadTalker` with its own virtual environment.
+
+```bash
+# clone the repository
+git clone https://github.com/OpenTalker/SadTalker ~/SadTalker
+cd ~/SadTalker
+
+# create a virtual environment and install dependencies
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+# verify the CLI works
+python sadtalker_cli.py --help
+```
+
+During video generation, `--animate` will invoke `~/SadTalker/sadtalker_cli.py`
+to lipsync images with generated speech audio.
 
 ---
 
