@@ -1,0 +1,15 @@
+transformers==4.37.2
+diffusers==0.27.2
+huggingface-hub==0.20.3
+accelerate==0.25.0
+pillow==10.2.0
+numpy>=1.25,<2.0
+pandas==2.2.2
+matplotlib==3.8.4
+moviepy==1.0.3
+opencv-python==4.9.0.80
+ffmpeg-python==0.2.0
+audiocraft==0.0.2
+xformers==0.0.30
+tts==0.17.1
+gradio==4.16.0
