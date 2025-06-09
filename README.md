@@ -1,4 +1,5 @@
-# 🎞️ Open Source Prompt-to-Video Generator
+Create the virtual environment and install dependencies. The setup script
+installs PyTorch first so that packages like `xformers` compile correctly.
 
 This repository contains a modular pipeline to generate a **1-minute video** from a **text prompt**, entirely offline, using only **open-source tools**. It runs locally on **macOS (Apple Silicon)** and handles scriptwriting, image generation, voice synthesis, optional animation, and video assembly.
 
